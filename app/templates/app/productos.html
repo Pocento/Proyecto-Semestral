@@ -8,6 +8,7 @@
 
     </div>
 </section> 
+
 <div class="card" style="border-radius: 30px;">
     <div class="card-header" style="text-shadow: 2px 2px 5px red;">
         <h2>PRODUCTOS</h2>
@@ -41,7 +42,9 @@
                             {% endif %}
                         </td>
                         <td>
+                            
                             <a href="{% url 'modificar_productos' aux.id %}" class="btn btn-info">Modificar</a>
+                            <a @click="add_carts"  class="add_cart btn btn-info" id="add_cart"> Añadir al carrito </a>
                             <a onclick="confirmarEliminar({{ aux.id }})" class="btn btn-danger">Eliminar</a> 
                         </td>
                     </tr>

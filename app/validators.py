@@ -11,6 +11,3 @@ class TamañoMaximoValidator:
         if tamaño > maxfileT:
             raise ValidationError (f"El tamaño maximo del archivo debe ser {self.maxfile} ")
 
-class Minimoletras:
-    def __init__(self, min=1):
-        self.
