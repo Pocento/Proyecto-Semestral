@@ -1,0 +1,25 @@
+{%extends 'app/base.html' %}
+{% load static %}
+
+{%block contenido%}
+<section class="fondo">
+  <div class="fondoregistro"></div>
+</section> 
+{% load crispy_forms_tags %}
+<div class="container">
+  <form action=""  method="POST">
+    <section class="registro" >
+      <div style="text-align: center;"><img src="{% static 'app/dist/img/logo.png'%}" alt=""></div>
+      {% csrf_token %}
+      <div class="registable">
+      <table >{{ form|crispy }}</table>
+      </div>
+      <a href="{% url 'index' %}">Ir al home</a> |
+      <a href="{% url 'login' %}">Login</a>
+      <input type="submit" style="margin: 0 auto; height: 50px; width: 190px;" class="btn btn-success btn-block" value="Registrar">
+    </section>
+  </form>
+</div>
+{%endblock%}
+
+

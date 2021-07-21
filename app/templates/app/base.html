@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%load static%}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'app/dist/css/style.css'%}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <title>Inicio</title>
+  <!--{%load static%} {% static 'app '}-->
+  <style>
+    .info{
+    margin-right: 0%;
+    font-size: 25px;
+    color: white;
+}
+  </style>
+{% block javascript %}
+<script src="{% static 'app/dist/js/funcionalidades.js' %}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{%endblock%}
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img src="{% static 'app/dist/img/logo.png'%}" alt="logo" style="width:40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'productos' %}">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+          </li>
+          </li> <li class="nav-item">
+            <a class="nav-link" href="{% url 'agregar_productos' %}">Agregar Producto</a>
+          </li>
+          
+        </ul>
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" style="text-decoration: none; color: white;" href="#">{{ user.username }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-decoration: none; color: white;" href="{% url 'logout' %}">Logout</a>
+          </li>
+        {% else %}
+        <form class="form-inline my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="text-decoration: none; color: whitesmoke;" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-decoration: none; color: white;" href="{% url 'registrarse' %}">Sign up</a>
+          </li> 
+        </form>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    {%block contenido%}
+    {%endblock%}
+  </div>
+  <footer>
+    <p>Derechos reservados a HappyPets @COPYRIGHT 2021</p>
+  </footer>
+</body>
+
+</html>

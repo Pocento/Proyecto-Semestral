@@ -1,0 +1,48 @@
+
+{%extends 'app/base.html' %}
+{% load static %}
+
+{%block contenido%}
+<!-- Fondo de pantalla para contacto -->
+<section class="fondo">
+  <div class="fondocontacto">
+
+  </div>
+</section>
+
+<!-- Forma de contacto  -->
+<div class="container">
+  <section class="contacto"> 
+    <div class="row">
+      
+      <form action="recibo.html" method="GET">
+        <div class="contacto-titulo"><h1>CONTACTO</h1></div>
+        <div class="form-group">
+          <label for="txtNombre">Email *:</label>
+          <input type="text" name="txtNombre" id="txtNombre" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="txtDueno">Nombre *:</label>
+          <input type="text" name="txtDueno" id="txtDueno" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="txtFecha">Telefono:</label>
+          <input type="text" name="txtTelefono" id="txtTelefono" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="txtEdad">Mensaje *:</label>
+          <input type="number" name="txtEdad" id="txtEdad" class="form-control">
+        </div>
+        <i> * Campos obligatorios</i>
+        <div class="form-group text-center">
+          <input type="submit" name="btnEnviar" id="btnEnviar" class="btn btn-success">
+          <input type="reset" name="btnLimpiar" id="btnLimpiar" class="btn btn-danger">
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+ 
+
+{%endblock%}
+

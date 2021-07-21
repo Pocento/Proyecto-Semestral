@@ -1,0 +1,62 @@
+
+{%extends 'app/base.html' %}
+{% load static %}
+
+{%block contenido%}
+<section class="fondo">
+    <div class="fondoproductos">
+
+    </div>
+</section> 
+<div class="card" style="border-radius: 30px;">
+    <div class="card-header" style="text-shadow: 2px 2px 5px red;">
+        <h2>PRODUCTOS</h2>
+    </div>
+    <div class="card-body" >
+        <table class="table table-condensed"> 
+            <thead>
+                <tr>
+                    <td>NOMBRE</td>
+                    <td>PRECIO</td>
+                    <td>DESCRIPCION</td>
+                    <td>TIPO</td>
+                    <td>FECHA</td>
+                    <td>IMAGEN</td>
+                    <td>OPCIONES</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aux in listaProductos %}
+                    <tr>
+                        <td>{{ aux.nombre }}</td>
+                        <td>${{ aux.precio }}</td>
+                        <td>{{ aux.descripcion }}</td>
+                        <td>{{ aux.tipo }}</td>
+                        <td>{{ aux.fecha }}</td>
+                        <td>
+                            {% if aux.imagen %}
+                               <img src="{{ aux.imagen.url }}" class="img-thumbnail" alt="" width="100" height="100"> 
+                            {% else %}
+                                <p>no hay imagen.</p>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{% url 'modificar_productos' aux.id %}" class="btn btn-info">Modificar</a>
+                            <a onclick="confirmarEliminar({{ aux.id }})" class="btn btn-danger">Eliminar</a> 
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+        <div>
+            {% include 'app/paginator.html' %}
+        </div>
+    </div>
+    
+    <div class="card-footer">
+
+    </div>
+</div>
+{%endblock%}
+

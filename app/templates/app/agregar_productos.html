@@ -1,0 +1,29 @@
+
+{%extends 'app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{%block contenido%}
+<section class="fondo">
+    <div class="fondoproductos">
+    </div>
+</section> 
+<div class="container">
+  <section class="agregar">
+    <div style="text-align: center; font-size: 30px; text-shadow: 2px 2px 5px crimson;" >Agregar Un producto</div>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+          {{ form }}
+        </table>
+        <input type="submit" class="btn btn-success" value="Guardar">
+      <input type="reset" class="btn btn-danger" value="Limpiar">
+      </form> 
+      {{ mensaje }}
+      </div>
+  </section>
+  
+</div>
+
+
+
+{%endblock%}

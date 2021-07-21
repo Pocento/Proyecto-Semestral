@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+
+nav {
+    list-style: none;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: white;
+    z-index: 10;
+}
+
+header nav {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+header nav li {
+    margin: 0 15px;
+
+}
+
+
+
+section {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    padding: 30px;
+   
+}
+/* Estilos de Fondo de pantalla */
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/gato.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+.banner-img::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    content: '';
+}
+.fondo .fondoimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondologin.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+.fondo .fondoimg::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    content: '';
+}
+.fondo .fondoregistro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondoregistro.jpg');
+    background-size: cover;
+    z-index: -1;
+
+}
+.fondo .fondoregistro::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    content: '';
+}
+.fondo .fondocontacto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/gatito.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+.fondo .fondocontacto::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    content: '';
+}
+.fondo .fondoproductos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/persa.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+
+
+.banner h1 {
+    margin-bottom: 15px;
+    font-size: 60px;
+}
+
+.banner h2 {
+    margin-bottom: 15px;
+    font-size: 60px;
+}
+
+.banner a.banner-btn {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 70px;
+    border-radius: 60px;
+    background: crimson;
+}
+
+.logo-btn {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+}
+
+
+
+footer {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: fixed ;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+#formulario {
+    margin: auto;
+    width: 80%;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 20px;
+}
+.login-titulo{
+    font-size: 30px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+
+}
+.registro-titulo{
+    font-size: 30px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.login{
+    box-shadow: 2px 2px 5px black;
+    margin: auto;
+    margin-top: 0px;
+    background-color: white ;
+    border-radius: 50px;
+    width: 500px;
+}
+.registro{
+    box-shadow: 2px 2px 5px black;
+    margin: auto;
+    margin-top: 0px;
+    background-color: white ;
+    border-radius: 60px;
+    width: 600px;
+}
+.modificarproductos{
+    box-shadow: 2px 2px 5px black;
+    margin: auto;
+    margin-top: 0px;
+    background-color: white ;
+    border-radius: 50px;
+    width: 50%;
+}
+.agregar{
+    box-shadow: 2px 2px 8px black;
+    margin: auto;
+    margin-top: 0px;
+    background-color: white ;
+    border-radius: 50px;
+    width: 50%;
+}
+.contacto{
+    box-shadow: 2px 2px 5px black;
+    margin: auto;
+    margin-top: 0px;
+    background-color: white ;
+    border-radius: 50px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+}
+.texto-inicio{
+    text-shadow: 20px 2px 100px gray;
+    margin-top: 100px;
+    font-size: 40px;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    text-align: center;
+    color:white ;
+    border-radius: 10px;
+}
+.btn{
+    border: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: blue;
+}
+.btn-enviar{
+    background-color: tomato;
+}
+#txtuser{
+    width: 70%;
+}
+#txtNombre{
+    width: 100%;
+}
+.contactoformulario{
+    border-radius: 40px;
+    
+}
+.contacto-titulo{
+    text-shadow: 2px 2px 8px crimson;
+    font-size: 30px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.texto-inicio .info{
+    margin: auto;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative  ;
+    padding-left: 600px;
+    font-size: 20px;
+}
+
+.productos{
+
+    float: left;
+    margin-top: 55px;
+}
+
+
+
+.productos img{
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.caja{
+    border-radius: 40px;
+    background-color: white;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.productos h3{
+    font-size: 1.7em;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.logo-productos{
+
+    text-align: center;
+    color: black;
+    margin-top: 85px;
+}
+
+.productos .subtitulos{
+    margin-top: 25px;
+}
+
+.productos img{
+    justify-items: center;
+    width: 100%;
+    padding: 20px 40px;
+
+}
+
+.productos a{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 115px;
+    padding: 5px 30px;
+    font-size: 15px;
+    text-decoration:none;
+    text-transform: uppercase;
+}
+
+.vermas-btn{
+    background-color: green;
+    border: none;
+    color:black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.vermas-btn:hover{
+    background-color: rgb(3, 80, 3);
+
+}
+
+.productos #rascadores {
+    margin-top: 25px;
+
+}
+.agregar {
+    color: black;
+}
+.boton-registro
+{
+    display: block;
+    font-size: 16px;
+    padding: 12px 0.8em 12px 0.8em;
+    font-size: 1rem;
+    border: 1px solid #0791e6;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: #0791e6;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.registable table td{
+   font-size: 14px;
+    
+}
+
+.registable table input{
+    width: 90%;
+}
+.modify table td{
+    font-size: 14px;
+}
+.modify table input{
+    width: 90%;
+}
+.table thead tr td{
+    text-shadow: 2px 2px 8px crimson;
+}
+.prueba2{
+    align-items: center;
+    width: 100%;
+}
+/* Media */
+
+@media (max-width:1000px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .logo {
+        width: 100%;
+    }
+
+    header nav li a {
+        font-size: 10px;
+    }
+}
+@media (max-width:375px) {
+    
+}
+@media (max-width:425px) {
+    section {
+        padding: 130px 30px;
+    }
+}
+@media (max-width:768px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+@media (max-width:1024){
+
+}
+@media (max-width:320px) {
+    .banner {
+         min-height: 400px;
+    }
+    .banner h1 {
+        font-size: 40px;
+    }
+    .banner h2 {
+        font-size: 30px;
+    }
+    .banner a.banner-btn {
+        font-size: 15px;
+        padding: 15px 30px;
+        
+    }
+    .texto-inicio .info{
+        font-size: 15px;
+    }
+    header {
+        width: 100%;
+    }
+    section .agregar{
+        width: 50%;
+        height: 50%;
+    }
+    
+}
