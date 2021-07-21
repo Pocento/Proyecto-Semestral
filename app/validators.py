@@ -4,7 +4,7 @@ class TamañoMaximoValidator:
     def __init__(self, maxfile=3) :
         self.maxfile = maxfile
     
-    def __call__ (sef, value):
+    def __call__ (self, value):
         tamaño = value.size
         maxfileT = self.maxfile * 1048576
 

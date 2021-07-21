@@ -2,24 +2,27 @@
 {% load static %}
 
 {%block contenido%}
+
 <section class="fondo">
   <div class="fondoproductos">
   </div>
-</section> 
+</section>
 <div class="">
   <section class="modificarproductos">
     <form action="" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="modify">
-        <table> 
+        <table>
           {{ form }}
         </table>
       </div>
-     
+      
       <input type="submit" class="btn btn-info" value="Modificar">
       <input type="reset" class="btn btn-danger" value="Limpiar">
-     </form> 
-     {{ mensaje }}
+    </form>
+    
+    </script>
+    {{ mensaje }}
   </section>
 </div>
 
